@@ -1,0 +1,14 @@
+O que o Sync Settings sincroniza?
+
+Configurações
+Teclas de atalhos
+Launch File
+Snippets
+Extensões do VS Code e as configurações das extensões
+Workspaces
+
+
+Pressione Shift + Alt + U para perguntar ao seu token de acesso à conta do GitHub.
+
+Digite “> Sync” na Paleta de Comandos para fazer o download / upload do pedido
+
