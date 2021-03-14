@@ -1,6 +1,6 @@
 {
   // Define o tema do VSCode
-  "workbench.colorTheme": "Shades of Purple",
+  "workbench.colorTheme": "Dracula",
   // Configura tamanho e família da fonte
   "editor.fontSize": 18,
   "editor.lineHeight": 24,
@@ -14,7 +14,8 @@
   "[javascript]": {
     "editor.codeActionsOnSave": {
       "source.fixAll.eslint": true
-    }
+    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[javascriptreact]": {
     "editor.codeActionsOnSave": {
@@ -34,7 +35,8 @@
   "[vue]": {
     "editor.codeActionsOnSave": {
       "source.fixAll.eslint": true
-    }
+    },
+    "editor.defaultFormatter": "octref.vetur"
   },
   "[html]": {
     "editor.codeActionsOnSave": {
@@ -44,45 +46,16 @@
   "files.associations": {
     ".sequelizerc": "javascript",
     ".stylelintrc": "json",
-    ".prettierrc": "json"
+    ".prettierrc": "json",
+    ".eslintrc.js": "vue",
+    "*.js": "vue",
+    "*.html": "html"
   },
-
-  "eslint.autoFixOnSave": true,
-  "eslint.validate": [
-    {
-      "language": "vue",
-      "autoFix": true
-    },
-    {
-      "language": "html",
-      "autoFix": true
-    },
-    {
-      "language": "javascript",
-      "autoFix": true
-    },
-    {
-      "language": "javascriptreact",
-      "autoFix": true
-    },
-    {
-      "language": "typescriptreact",
-      "autoFix": true
-    },
-    {
-      "language": "typescript",
-      "autoFix": true
-    }
-  ],
   "eslint.options": {
     "extensions": [".js", ".vue"]
   },
 
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-
   "vetur.format.defaultFormatter.css": "none",
   "vetur.format.defaultFormatter.js": "none",
   "vetur.format.defaultFormatter.less": "none",
@@ -112,34 +85,26 @@
   "gitlens.codeLens.enabled": false,
   "breadcrumbs.enabled": true,
   "git.enableSmartCommit": true,
-  "editor.parameterHints.enabled": false,
+  "editor.parameterHints.enabled": true,
   "typescript.updateImportsOnFileMove.enabled": "never",
   "terminal.integrated.shell.osx": "/bin/zsh",
   "explorer.confirmDragAndDrop": false,
   "liveshare.featureSet": "insiders",
   "explorer.confirmDelete": false,
   "typescript.tsserver.log": "verbose",
-  "javascript.suggest.autoImports": false,
-  "typescript.suggest.autoImports": false,
+  "javascript.suggest.autoImports": true,
+  "typescript.suggest.autoImports": true,
   "workbench.activityBar.visible": true,
   "editor.formatOnPaste": true,
-  "editor.formatOnSave": true,
   "gitlens.advanced.messages": {
     "suppressFileNotUnderSourceControlWarning": true
   },
-  "[vue]": {
-    "editor.defaultFormatter": "octref.vetur"
-  },
   "[python]": {
     "editor.defaultFormatter": "iansan5653.format-python-docstrings",
-    "python.pythonPath": "[/usr/bin/python3.8]",
-    "python.linting.pycodestyleEnabled": true,
-    "python.formatting.provider": "autopep8"
   },
   "pip-updater.AutoUpdate": true,
   "pythonIndent.useTabOnHangingIndent": true,
-  "kite.showWelcomeNotificationOnStartup": true,
-  "files.autoSave": "afterDelay",
+  "files.autoSave": "off",
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -149,5 +114,15 @@
   },
   "editor.suggestSelection": "first",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "python.jediEnabled": false
+  "python.languageServer": "Microsoft",
+  "editor.tabCompletion": "on",
+  "editor.useTabStops": true,
+  "editor.stickyTabStops": true,
+  "workbench.editorAssociations": [
+    {
+      "viewType": "jupyter.notebook.ipynb",
+      "filenamePattern": "*.ipynb"
+    }
+  ],
+  "terminal.integrated.inheritEnv": false
 }

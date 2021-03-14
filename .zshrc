@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/itrack/.oh-my-zsh"
+export ZSH="/home/jhonat/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -99,8 +99,13 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # added by Anaconda3 installer
-export PATH="/home/itrack/Downloads/yes/bin:$PATH"
-export PATH="/home/itrack/Documentos/java/jdk-12.0.1/bin:$PATH"
+#export PATH="/home/itrack/Downloads/yes/bin:$PATH"
+#export PATH="/home/itrack/Documentos/java/jdk-12.0.1/bin:$PATH"
+
+#added gromacs
+
+
+#source /home/jhonat/Documentos/gromacs-2021-rc1/build/bin
 
 
 # *********************************************
@@ -204,6 +209,9 @@ HISTFILESIZE=2000
 # DIVERSOS
 #==========================
 
+#inciando screen 
+#screen -R -d
+
 ## Habilitando suporte a cores para o ls e outros aliases
 ## Vê se o arquivo existe
 if [ -x /usr/bin/dircolors ]; then
@@ -232,7 +240,9 @@ alias aptrepair='sudo apt-get -f install'
 alias dpkgrepair='sudo dpkg --configure -a'
 
 
-alias npad='-p4422 jhadsouza@sc.npad.imd.ufrn.br'
+alias npad='ssh -p4422 jhadsouza@sc.npad.imd.ufrn.br'
+alias servidor='ssh root@157.230.221.177'
+
 
 #==============================================
 # Aliases para uso no dia-a-dia e testes
@@ -244,17 +254,18 @@ alias uol='ping -t 3 www.uol.com.br' # Ping ao UOL a cada 3 segundos
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/itrack/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/itrack/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/itrack/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/itrack/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
+#source ~/anaconda3/bin/activate conda init
+# __conda_setup="$('/home/jhonat/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+# if [ $? -eq 0 ]; then
+#     eval "$__conda_setup"
+# else
+#     if [ -f "/home/jhonat/anaconda3/etc/profile.d/conda.sh" ]; then
+#         . "/home/jhonat/anaconda3/etc/profile.d/conda.sh"
+#     else
+#         export PATH="/home/jhonat/anaconda3/bin:$PATH"
+#     fi
+# fi
+# unset __conda_setup
 # <<< conda initialize <<<
 
 SPACESHIP_PROMPT_ORDER=(
@@ -293,3 +304,14 @@ zplugin light zsh-users/zsh-autosuggestions
 zplugin light zsh-users/zsh-completions
 zplugin light zdharma/fast-syntax-highlighting
 
+
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
+
+#export PATH="$HOME/.pyenv/bin:$PATH"
+#eval "$(pyenv init -)"
+#eval "$(pyenv virtualenv-init -)"
+#
+#anaconda
+source ~/anaconda3/etc/profile.d/conda.sh
