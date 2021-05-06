@@ -124,5 +124,4 @@
       "filenamePattern": "*.ipynb"
     }
   ],
-  "terminal.integrated.inheritEnv": false
 }
